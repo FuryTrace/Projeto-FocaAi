@@ -89,14 +89,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingStart="10dp"
-            android:paddingEnd="10dp">
-
-            <RadioButton android:id="@+id/radioEngenhariaSoftware" android:layout_width="match_parent" android:layout_height="51dp" android:text="Engenharia de Software" android:textColor="@color/foca_text" android:textSize="16sp" />
-            <RadioButton android:id="@+id/radioSegurancaInformacao" android:layout_width="match_parent" android:layout_height="51dp" android:text="Segurança da informação" android:textColor="@color/foca_text" android:textSize="16sp" />
-            <RadioButton android:id="@+id/radioQualidadeSoftware" android:layout_width="match_parent" android:layout_height="51dp" android:text="Qualidade de Software" android:textColor="@color/foca_text" android:textSize="16sp" />
-            <RadioButton android:id="@+id/radioLaboratorioInovacao" android:layout_width="match_parent" android:layout_height="51dp" android:text="Laboratório de inovação IV" android:textColor="@color/foca_text" android:textSize="16sp" />
-            <RadioButton android:id="@+id/radioGovernancaTI" android:layout_width="match_parent" android:layout_height="51dp" android:text="Governança de TI" android:textColor="@color/foca_text" android:textSize="16sp" />
-        </RadioGroup>
+            android:paddingEnd="10dp"/>
     </LinearLayout>
 
     <Button

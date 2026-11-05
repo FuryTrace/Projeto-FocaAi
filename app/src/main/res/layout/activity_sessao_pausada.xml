@@ -26,12 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:gravity="center"
-        android:text="19:31"
         android:textColor="@color/foca_text"
         android:textSize="72sp"
-        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoPausada"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoPausada" />
 
     <LinearLayout
         android:id="@+id/linhaCiclosPausada"
@@ -44,10 +43,41 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="✓" android:textColor="@color/foca_text" android:textSize="22sp" />
-        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="2" android:textColor="@color/foca_text" android:textSize="20sp" />
-        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="3" android:textColor="@color/foca_text" android:textSize="20sp" />
-        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="4" android:textColor="@color/foca_text" android:textSize="20sp" />
+        <TextView
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/circulo_ciclo_foca"
+            android:gravity="center"
+            android:textColor="@color/foca_text"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/circulo_ciclo_foca"
+            android:gravity="center"
+            android:textColor="@color/foca_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/circulo_ciclo_foca"
+            android:gravity="center"
+            android:textColor="@color/foca_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/circulo_ciclo_foca"
+            android:gravity="center"
+            android:textColor="@color/foca_text"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <TextView

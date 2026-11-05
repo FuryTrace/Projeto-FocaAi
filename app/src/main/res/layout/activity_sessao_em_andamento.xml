@@ -25,14 +25,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
+        android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="24:32"
         android:textColor="@color/foca_text"
         android:textSize="72sp"
-        android:fontFamily="sans-serif"
-        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoSessao"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoSessao" />
 
     <LinearLayout
         android:id="@+id/linhaCiclos"
@@ -45,10 +44,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView android:id="@+id/ciclo1" android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="✓" android:textColor="@color/foca_text" android:textSize="22sp" />
-        <TextView android:id="@+id/ciclo2" android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="2" android:textColor="@color/foca_text" android:textSize="20sp" />
-        <TextView android:id="@+id/ciclo3" android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="3" android:textColor="@color/foca_text" android:textSize="20sp" />
-        <TextView android:id="@+id/ciclo4" android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="4" android:textColor="@color/foca_text" android:textSize="20sp" />
+        <TextView
+            android:id="@+id/ciclo1"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/circulo_ciclo_foca"
+            android:gravity="center"
+            android:textColor="@color/foca_text"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/ciclo2"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/circulo_ciclo_foca"
+            android:gravity="center"
+            android:textColor="@color/foca_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ciclo3"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/circulo_ciclo_foca"
+            android:gravity="center"
+            android:textColor="@color/foca_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ciclo4"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/circulo_ciclo_foca"
+            android:gravity="center"
+            android:textColor="@color/foca_text"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <TextView
