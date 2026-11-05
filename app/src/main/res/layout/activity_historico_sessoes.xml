@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_foca_gradient"
+    tools:context=".activities.HistoricoSessoesActivity">
+
+    <Button
+        android:id="@+id/btnVoltarHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:text="‹  Voltar"
+        android:textAllCaps="false"
+        android:textColor="@color/foca_text"
+        android:textSize="15sp"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp" />
+
+    <ImageButton
+        android:id="@+id/btnConfiguracoesHistorico"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Configurações"
+        android:src="@android:drawable/ic_menu_preferences"
+        app:tint="@color/foca_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#55000000"
+        android:layout_marginTop="106dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTituloHistorico"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="91dp"
+        android:background="@drawable/card_lista_foca"
+        android:gravity="center_vertical"
+        android:paddingStart="82dp"
+        android:text="Histórico das Sessões"
+        android:textColor="@color/foca_text"
+        android:textSize="19sp"
+        app:layout_constraintTop_toBottomOf="@id/btnVoltarHistorico"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/listaHistorico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
+        android:background="@drawable/card_lista_foca"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloHistorico"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView android:id="@+id/itemHistorico1" android:layout_width="match_parent" android:layout_height="53dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="Engenharia de Software\n21 de setembro de 2026 às 15:38" android:textColor="@color/foca_text" android:textSize="13sp" />
+        <TextView android:id="@+id/itemHistorico2" android:layout_width="match_parent" android:layout_height="53dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="Segurança da informação\n19 de setembro de 2026 às 15:35" android:textColor="@color/foca_text" android:textSize="13sp" />
+        <TextView android:id="@+id/itemHistorico3" android:layout_width="match_parent" android:layout_height="53dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="Qualidade de Software\n17 de setembro de 2026 às 12:35" android:textColor="@color/foca_text" android:textSize="13sp" />
+        <TextView android:id="@+id/itemHistorico4" android:layout_width="match_parent" android:layout_height="53dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="Laboratório de inovação IV\n16 de setembro de 2026 às 18:42" android:textColor="@color/foca_text" android:textSize="13sp" />
+        <TextView android:id="@+id/itemHistorico5" android:layout_width="match_parent" android:layout_height="53dp" android:gravity="center_vertical" android:paddingStart="12dp" android:text="Governança de TI\n16 de setembro de 2026 às 13:45" android:textColor="@color/foca_text" android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDataHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:gravity="center"
+        android:text="Quarta-feira\n04 de novembro de 2026"
+        android:textColor="@color/foca_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

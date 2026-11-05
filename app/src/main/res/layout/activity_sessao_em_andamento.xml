@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_foca_gradient"
+    tools:context=".activities.SessaoEmAndamentoActivity">
+
+    <TextView
+        android:id="@+id/txtIlustracaoSessao"
+        android:layout_width="172dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/card_foca"
+        android:gravity="center"
+        android:text="📚"
+        android:textSize="86sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCronometro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="24:32"
+        android:textColor="@color/foca_text"
+        android:textSize="72sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoSessao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linhaCiclos"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txtCronometro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView android:id="@+id/ciclo1" android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="✓" android:textColor="@color/foca_text" android:textSize="22sp" />
+        <TextView android:id="@+id/ciclo2" android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="2" android:textColor="@color/foca_text" android:textSize="20sp" />
+        <TextView android:id="@+id/ciclo3" android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="3" android:textColor="@color/foca_text" android:textSize="20sp" />
+        <TextView android:id="@+id/ciclo4" android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="4" android:textColor="@color/foca_text" android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtStatusSessao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:text="Governança de TI\nEm andamento"
+        android:textColor="@color/foca_text"
+        android:textSize="23sp"
+        app:layout_constraintTop_toBottomOf="@id/linhaCiclos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnPausarSessao"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="124dp"
+        android:background="@drawable/button_foca_pink"
+        android:text="Ⅱ   Pausar Sessão"
+        android:textAllCaps="false"
+        android:textColor="@color/foca_text"
+        android:textSize="19sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

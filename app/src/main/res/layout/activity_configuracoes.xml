@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_foca_gradient"
+    tools:context=".activities.ConfiguracoesActivity">
+
+    <Button
+        android:id="@+id/btnVoltarConfiguracoes"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:text="‹  Voltar"
+        android:textAllCaps="false"
+        android:textColor="@color/foca_text"
+        android:textSize="15sp"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:id="@+id/txtTituloConfiguracoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configurações"
+        android:textColor="@color/foca_text"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btnVoltarConfiguracoes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/txtGrupoConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTA"
+        android:textColor="@color/foca_text"
+        android:textSize="12sp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTituloConfiguracoes" />
+
+    <LinearLayout
+        android:id="@+id/cardConta"
+        android:layout_width="0dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/card_foca"
+        app:layout_constraintTop_toBottomOf="@id/txtGrupoConta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/txtUsuarioConfiguracoes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="👤   William"
+            android:textColor="@color/foca_text"
+            android:textSize="14sp" />
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#66000000" />
+
+        <Button
+            android:id="@+id/btnEditarPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:text="Editar Perfil"
+            android:textAllCaps="false"
+            android:textColor="@color/foca_text"
+            android:textSize="14sp"
+            app:backgroundTint="@null" />
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#66000000" />
+
+        <Button
+            android:id="@+id/btnAlterarSenhaConfiguracoes"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:text="Alterar senha"
+            android:textAllCaps="false"
+            android:textColor="@color/foca_text"
+            android:textSize="14sp"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtGrupoPreferencias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PREFERÊNCIAS"
+        android:textColor="@color/foca_text"
+        android:textSize="12sp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardConta" />
+
+    <LinearLayout
+        android:id="@+id/cardPreferencias"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/card_foca"
+        app:layout_constraintTop_toBottomOf="@id/txtGrupoPreferencias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Switch
+            android:id="@+id/switchNotificacoes"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Notificações"
+            android:textColor="@color/foca_text"
+            android:textSize="14sp" />
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#66000000" />
+
+        <Switch
+            android:id="@+id/switchModoEscuro"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Modo Escuro"
+            android:textColor="@color/foca_text"
+            android:textSize="14sp" />
+
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#66000000" />
+
+        <TextView
+            android:id="@+id/txtIdiomaConfiguracoes"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:gravity="center_vertical"
+            android:text="Idioma                         Português (BR)  ▾"
+            android:textColor="@color/foca_text"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtGrupoSobre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOBRE"
+        android:textColor="@color/foca_text"
+        android:textSize="12sp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardPreferencias" />
+
+    <LinearLayout
+        android:id="@+id/cardSobre"
+        android:layout_width="0dp"
+        android:layout_height="112dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/card_foca"
+        app:layout_constraintTop_toBottomOf="@id/txtGrupoSobre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center_vertical" android:text="Versão do Aplicativo                         1.2.3" android:textColor="@color/foca_text" android:textSize="12sp" />
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#66000000" />
+        <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center_vertical" android:text="Termos de Uso" android:textColor="@color/foca_text" android:textSize="12sp" />
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#66000000" />
+        <TextView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center_vertical" android:text="Política de Privacidade" android:textColor="@color/foca_text" android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSairConta"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/button_foca_pink"
+        android:text="Sair da conta"
+        android:textAllCaps="false"
+        android:textColor="@color/foca_text"
+        android:textSize="15sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

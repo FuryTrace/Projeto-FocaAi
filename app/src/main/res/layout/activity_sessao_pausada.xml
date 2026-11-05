@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_foca_gradient"
+    tools:context=".activities.SessaoPausadaActivity">
+
+    <TextView
+        android:id="@+id/txtIlustracaoPausada"
+        android:layout_width="213dp"
+        android:layout_height="213dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/card_foca"
+        android:gravity="center"
+        android:text="☕"
+        android:textSize="96sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCronometroPausado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="19:31"
+        android:textColor="@color/foca_text"
+        android:textSize="72sp"
+        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoPausada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linhaCiclosPausada"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txtCronometroPausado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="✓" android:textColor="@color/foca_text" android:textSize="22sp" />
+        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="2" android:textColor="@color/foca_text" android:textSize="20sp" />
+        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="3" android:textColor="@color/foca_text" android:textSize="20sp" />
+        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="4" android:textColor="@color/foca_text" android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtStatusPausada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Governança de TI\nSessão Pausada"
+        android:textColor="@color/foca_text"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/linhaCiclosPausada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnRetomarSessao"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="132dp"
+        android:background="@drawable/button_foca_pink"
+        android:text="▶   Retomar Sessão"
+        android:textAllCaps="false"
+        android:textColor="@color/foca_text"
+        android:textSize="19sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

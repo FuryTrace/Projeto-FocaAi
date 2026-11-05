@@ -7,4 +7,8 @@
     <color name="accent">#E8B85D</color>
     <color name="text_primary">#17212B</color>
     <color name="text_on_primary">#FFFFFF</color>
+    <color name="foca_text">#17121F</color>
+    <color name="foca_pink">#FFC8FB</color>
+    <color name="foca_lilac">#A29FFF</color>
+    <color name="foca_light_blue">#DCFAFF</color>
 </resources>

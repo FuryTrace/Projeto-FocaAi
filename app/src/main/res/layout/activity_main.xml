@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
-    tools:context=".MainActivity">
+    android:background="@drawable/bg_foca_gradient"
+    tools:context=".activities.MainActivity">
 
     <LinearLayout
         android:id="@+id/layoutInicio"
@@ -69,7 +69,8 @@
             android:textAllCaps="false"
             android:textColor="#000000"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
 
         <Button
             android:id="@+id/buttonCadastrarInicio"

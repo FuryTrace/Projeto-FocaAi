@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_foca_gradient"
+    tools:context=".activities.DescansoActivity">
+
+    <TextView
+        android:id="@+id/txtIlustracaoDescanso"
+        android:layout_width="260dp"
+        android:layout_height="247dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/card_foca"
+        android:gravity="center"
+        android:text="🌿"
+        android:textSize="100sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCronometroDescanso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:gravity="center"
+        android:text="11:59"
+        android:textColor="@color/foca_text"
+        android:textSize="72sp"
+        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoDescanso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linhaCiclosDescanso"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txtCronometroDescanso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="✓" android:textColor="@color/foca_text" android:textSize="22sp" />
+        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="✓" android:textColor="@color/foca_text" android:textSize="22sp" />
+        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="3" android:textColor="@color/foca_text" android:textSize="20sp" />
+        <TextView android:layout_width="58dp" android:layout_height="58dp" android:layout_margin="5dp" android:background="@drawable/circulo_ciclo_foca" android:gravity="center" android:text="4" android:textColor="@color/foca_text" android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMensagemDescanso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Descansando...\nSessão em Governança de TI encerrada."
+        android:textColor="@color/foca_text"
+        android:textSize="23sp"
+        app:layout_constraintTop_toBottomOf="@id/linhaCiclosDescanso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
