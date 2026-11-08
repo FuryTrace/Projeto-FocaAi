@@ -117,6 +117,7 @@ public class ConfiguracoesActivity extends AppCompatActivity {
                             .remove("id_usuario")
                             .remove("nome_usuario")
                             .remove("email_usuario")
+                            .remove("data_login")
                             .apply();
 
                     abrirLogin();

@@ -114,6 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                             .putLong("id_usuario", usuario.getId())
                             .putString("nome_usuario", usuario.getNome())
                             .putString("email_usuario", usuario.getEmail())
+                            .putLong("data_login", System.currentTimeMillis())
                             .apply();
 
                     Toast.makeText(LoginActivity.this, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show();
