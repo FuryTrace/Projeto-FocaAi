@@ -8,6 +8,21 @@
     android:background="@drawable/bg_foca_gradient"
     tools:context=".activities.DescansoConcluidoActivity">
 
+    <Button
+        android:id="@+id/btnVoltarConcluido"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:text="‹  Voltar ao início"
+        android:textAllCaps="false"
+        android:textColor="@color/foca_text"
+        android:textSize="15sp"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/txtIlustracaoDescansoConcluido"
         android:layout_width="304dp"

@@ -35,6 +35,7 @@ public class ConfiguracoesActivity extends AppCompatActivity {
     private Button btnVoltar;
     private Button btnSairConta;
     private Button btnExcluirConta;
+    private Button btnConfiguracoesPomodoro;
 
     private SharedPreferences preferencias;
 
@@ -58,6 +59,7 @@ public class ConfiguracoesActivity extends AppCompatActivity {
         btnVoltar = findViewById(R.id.btnVoltarConfiguracoes);
         btnSairConta = findViewById(R.id.btnSairConta);
         btnExcluirConta = findViewById(R.id.btnExcluirConta);
+        btnConfiguracoesPomodoro = findViewById(R.id.btnConfiguracoesPomodoro);
 
         preferencias = getSharedPreferences("FocaAi", MODE_PRIVATE);
 
@@ -90,6 +92,15 @@ public class ConfiguracoesActivity extends AppCompatActivity {
         btnSairConta.setOnClickListener(v -> confirmarSaida());
 
         btnExcluirConta.setOnClickListener(v -> confirmarExclusao());
+
+        btnConfiguracoesPomodoro.setOnClickListener(v -> {
+            Intent intent = new Intent(
+                    ConfiguracoesActivity.this,
+                    ConfiguracoesPomodoroActivity.class
+            );
+
+            startActivity(intent);
+        });
     }
 
     private void carregarDadosUsuario() {

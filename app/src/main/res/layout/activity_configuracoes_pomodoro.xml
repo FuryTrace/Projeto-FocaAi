@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_foca_gradient"
+    android:fillViewport="true"
+    tools:context=".activities.ConfiguracoesPomodoroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <Button
+            android:id="@+id/btnVoltarPomodoro"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:text="‹  Voltar"
+            android:textAllCaps="false"
+            android:textColor="@color/foca_text"
+            android:textSize="15sp"
+            app:backgroundTint="@null" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Configurações do Pomodoro"
+            android:textColor="@color/foca_text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Personalize os períodos de foco e descanso."
+            android:textColor="@color/foca_text"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/card_foca"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TEMPO DE FOCO"
+                android:textColor="@color/foca_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtTempoFoco"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/foca_text"
+                android:hint="25"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="12dp"
+                android:textColor="@color/foca_text"
+                android:textColorHint="#88777777"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="De 1 a 180 minutos"
+                android:textColor="@color/foca_text"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="20dp"
+                android:background="#66000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PAUSA CURTA"
+                android:textColor="@color/foca_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtPausaCurta"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/foca_text"
+                android:hint="5"
+                android:inputType="number"
+                android:maxLength="2"
+                android:padding="12dp"
+                android:textColor="@color/foca_text"
+                android:textColorHint="#88777777"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="De 1 a 60 minutos"
+                android:textColor="@color/foca_text"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="20dp"
+                android:background="#66000000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PAUSA LONGA"
+                android:textColor="@color/foca_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtPausaLonga"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/foca_text"
+                android:hint="15"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="12dp"
+                android:textColor="@color/foca_text"
+                android:textColorHint="#88777777"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="De 1 a 120 minutos"
+                android:textColor="@color/foca_text"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSalvarPomodoro"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/button_foca_pink"
+            android:text="Salvar configurações"
+            android:textAllCaps="false"
+            android:textColor="@color/foca_text"
+            android:textSize="15sp"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnRestaurarPomodoro"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/transparent"
+            android:text="Restaurar tempos padrão"
+            android:textAllCaps="false"
+            android:textColor="@color/foca_text"
+            android:textSize="14sp"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,11 +13,11 @@
         android:roundIcon="@drawable/livro"
         android:supportsRtl="true"
         android:theme="@style/Theme.FocaAi"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true" >
         <activity
             android:name=".activities.MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -74,6 +74,10 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SessaoPausadaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.ConfiguracoesPomodoroActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

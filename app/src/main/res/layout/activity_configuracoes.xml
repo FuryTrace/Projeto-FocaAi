@@ -157,7 +157,7 @@
     <LinearLayout
         android:id="@+id/cardPreferencias"
         android:layout_width="0dp"
-        android:layout_height="128dp"
+        android:layout_height="176dp"
         android:layout_marginStart="52dp"
         android:layout_marginEnd="52dp"
         android:background="@drawable/card_foca"
@@ -166,6 +166,23 @@
         app:layout_constraintTop_toBottomOf="@id/txtGrupoPreferencias"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnConfiguracoesPomodoro"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:text="Configurações do Pomodoro  ›"
+            android:textAllCaps="false"
+            android:textColor="@color/foca_text"
+            android:textSize="14sp"
+            app:backgroundTint="@null" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#66000000" />
 
         <Switch
             android:id="@+id/switchNotificacoes"
