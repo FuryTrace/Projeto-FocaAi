@@ -20,10 +20,12 @@ public class ConfiguracoesPomodoroActivity extends AppCompatActivity {
     private static final int FOCO_PADRAO = 25;
     private static final int PAUSA_CURTA_PADRAO = 5;
     private static final int PAUSA_LONGA_PADRAO = 15;
+    private static final int BLOCOS_PADRAO = 4;
 
     private EditText edtTempoFoco;
     private EditText edtPausaCurta;
     private EditText edtPausaLonga;
+    private EditText edtQuantidadeBlocos;
 
     private SharedPreferences preferencias;
 
@@ -36,18 +38,14 @@ public class ConfiguracoesPomodoroActivity extends AppCompatActivity {
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(
-                    systemBars.left,
-                    systemBars.top,
-                    systemBars.right,
-                    systemBars.bottom
-            );
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
         edtTempoFoco = findViewById(R.id.edtTempoFoco);
         edtPausaCurta = findViewById(R.id.edtPausaCurta);
         edtPausaLonga = findViewById(R.id.edtPausaLonga);
+        edtQuantidadeBlocos = findViewById(R.id.edtQuantidadeBlocos);
 
         Button btnVoltar = findViewById(R.id.btnVoltarPomodoro);
         Button btnSalvar = findViewById(R.id.btnSalvarPomodoro);
@@ -55,46 +53,54 @@ public class ConfiguracoesPomodoroActivity extends AppCompatActivity {
 
         preferencias = getSharedPreferences("FocaAi", MODE_PRIVATE);
 
-        carregarTempos();
+        carregarConfiguracoes();
 
         btnVoltar.setOnClickListener(v -> finish());
 
-        btnSalvar.setOnClickListener(v -> salvarTempos());
+        btnSalvar.setOnClickListener(v -> salvarConfiguracoes());
 
         btnRestaurar.setOnClickListener(v -> confirmarRestauracao());
     }
 
-    private void carregarTempos() {
+    private void carregarConfiguracoes() {
 
         int foco = preferencias.getInt("tempo_foco_minutos", FOCO_PADRAO);
         int pausaCurta = preferencias.getInt("tempo_pausa_curta_minutos", PAUSA_CURTA_PADRAO);
         int pausaLonga = preferencias.getInt("tempo_pausa_longa_minutos", PAUSA_LONGA_PADRAO);
+        int blocos = preferencias.getInt("quantidade_blocos", BLOCOS_PADRAO);
 
         edtTempoFoco.setText(String.valueOf(foco));
         edtPausaCurta.setText(String.valueOf(pausaCurta));
         edtPausaLonga.setText(String.valueOf(pausaLonga));
+        edtQuantidadeBlocos.setText(String.valueOf(blocos));
     }
 
-    private void salvarTempos() {
+    private void salvarConfiguracoes() {
 
         String textoFoco = edtTempoFoco.getText().toString().trim();
         String textoPausaCurta = edtPausaCurta.getText().toString().trim();
         String textoPausaLonga = edtPausaLonga.getText().toString().trim();
+        String textoBlocos = edtQuantidadeBlocos.getText().toString().trim();
 
-        if (textoFoco.isEmpty() || textoPausaCurta.isEmpty() || textoPausaLonga.isEmpty()) {
-            Toast.makeText(this, "Preencha todos os tempos.", Toast.LENGTH_SHORT).show();
+        if (textoFoco.isEmpty() || textoPausaCurta.isEmpty() || textoPausaLonga.isEmpty() || textoBlocos.isEmpty()) {
+
+            Toast.makeText(this, "Preencha todos os campos.", Toast.LENGTH_SHORT).show();
             return;
         }
 
         int foco;
         int pausaCurta;
         int pausaLonga;
+        int blocos;
 
         try {
             foco = Integer.parseInt(textoFoco);
             pausaCurta = Integer.parseInt(textoPausaCurta);
             pausaLonga = Integer.parseInt(textoPausaLonga);
+            blocos = Integer.parseInt(textoBlocos);
+
         } catch (NumberFormatException e) {
+
             Toast.makeText(this, "Informe valores numéricos válidos.", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -117,13 +123,20 @@ public class ConfiguracoesPomodoroActivity extends AppCompatActivity {
             return;
         }
 
+        if (blocos < 3 || blocos > 5) {
+            edtQuantidadeBlocos.setError("Escolha entre 3 e 5 blocos.");
+            edtQuantidadeBlocos.requestFocus();
+            return;
+        }
+
         preferencias.edit()
                 .putInt("tempo_foco_minutos", foco)
                 .putInt("tempo_pausa_curta_minutos", pausaCurta)
                 .putInt("tempo_pausa_longa_minutos", pausaLonga)
+                .putInt("quantidade_blocos", blocos)
                 .apply();
 
-        Toast.makeText(this, "Tempos salvos com sucesso!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Configurações salvas com sucesso!", Toast.LENGTH_SHORT).show();
 
         finish();
     }
@@ -131,28 +144,30 @@ public class ConfiguracoesPomodoroActivity extends AppCompatActivity {
     private void confirmarRestauracao() {
 
         new AlertDialog.Builder(this)
-                .setTitle("Restaurar tempos padrão")
+                .setTitle("Restaurar configurações padrão")
                 .setMessage(
-                        "Deseja voltar aos tempos originais?\n\n" +
+                        "Deseja restaurar as configurações originais?\n\n" +
                                 "Foco: 25 minutos\n" +
                                 "Pausa curta: 5 minutos\n" +
-                                "Pausa longa: 15 minutos"
+                                "Pausa longa: 15 minutos\n" +
+                                "Quantidade de blocos: 4"
                 )
                 .setNegativeButton("Cancelar", null)
-                .setPositiveButton("Restaurar", (dialog, which) -> restaurarTempos())
+                .setPositiveButton("Restaurar", (dialog, which) -> restaurarConfiguracoes())
                 .show();
     }
 
-    private void restaurarTempos() {
+    private void restaurarConfiguracoes() {
 
         preferencias.edit()
                 .putInt("tempo_foco_minutos", FOCO_PADRAO)
                 .putInt("tempo_pausa_curta_minutos", PAUSA_CURTA_PADRAO)
                 .putInt("tempo_pausa_longa_minutos", PAUSA_LONGA_PADRAO)
+                .putInt("quantidade_blocos", BLOCOS_PADRAO)
                 .apply();
 
-        carregarTempos();
+        carregarConfiguracoes();
 
-        Toast.makeText(this, "Tempos padrão restaurados!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Configurações padrão restauradas!", Toast.LENGTH_SHORT).show();
     }
 }

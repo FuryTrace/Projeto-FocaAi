@@ -8,30 +8,43 @@
     android:background="@drawable/bg_foca_gradient"
     tools:context=".activities.SessaoPausadaActivity">
 
-    <Button
-        android:id="@+id/btnVoltarPausada"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:text="Sessão pausada"
+        android:textColor="@color/foca_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEncerrarPausada"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginTop="12dp"
         android:background="@android:color/transparent"
-        android:text="‹  Voltar"
+        android:text="Encerrar"
         android:textAllCaps="false"
         android:textColor="@color/foca_text"
-        android:textSize="15sp"
+        android:textSize="14sp"
         app:backgroundTint="@null"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtIlustracaoPausada"
-        android:layout_width="213dp"
-        android:layout_height="213dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="74dp"
         android:background="@drawable/card_foca"
         android:gravity="center"
         android:text="☕"
-        android:textSize="96sp"
+        android:textSize="90sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -40,61 +53,24 @@
         android:id="@+id/txtCronometroPausado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="18dp"
         android:gravity="center"
         android:textColor="@color/foca_text"
         android:textSize="72sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoPausada"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoPausada" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linhaCiclosPausada"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="64dp"
         android:layout_marginTop="18dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/txtCronometroPausado"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <TextView
-            android:layout_width="58dp"
-            android:layout_height="58dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/circulo_ciclo_foca"
-            android:gravity="center"
-            android:textColor="@color/foca_text"
-            android:textSize="22sp" />
-
-        <TextView
-            android:layout_width="58dp"
-            android:layout_height="58dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/circulo_ciclo_foca"
-            android:gravity="center"
-            android:textColor="@color/foca_text"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="58dp"
-            android:layout_height="58dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/circulo_ciclo_foca"
-            android:gravity="center"
-            android:textColor="@color/foca_text"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="58dp"
-            android:layout_height="58dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/circulo_ciclo_foca"
-            android:gravity="center"
-            android:textColor="@color/foca_text"
-            android:textSize="20sp" />
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/txtStatusPausada"
@@ -102,9 +78,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="Governança de TI\nSessão Pausada"
         android:textColor="@color/foca_text"
         android:textSize="22sp"
         app:layout_constraintTop_toBottomOf="@id/linhaCiclosPausada"
@@ -115,11 +90,11 @@
         android:id="@+id/btnRetomarSessao"
         android:layout_width="0dp"
         android:layout_height="68dp"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="59dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="72dp"
         android:background="@drawable/button_foca_pink"
-        android:text="▶   Retomar Sessão"
+        android:text="▶   Retomar sessão"
         android:textAllCaps="false"
         android:textColor="@color/foca_text"
         android:textSize="19sp"

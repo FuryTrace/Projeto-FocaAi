@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-import android.content.Intent;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -14,6 +12,7 @@ import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.focaai.R;
+import com.example.focaai.utils.AlertaSonoro;
 
 public class DescansoConcluidoActivity extends AppCompatActivity {
 
@@ -24,9 +23,11 @@ public class DescansoConcluidoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         WindowCompat.enableEdgeToEdge(getWindow());
         setContentView(R.layout.activity_descanso_concluido);
+
+        // Avisar que a sessão foi encerrada ou concluída.
+        AlertaSonoro.tocarSessaoConcluida();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -38,43 +39,35 @@ public class DescansoConcluidoActivity extends AppCompatActivity {
         btnNovaSessao = findViewById(R.id.btnNovaSessao);
         btnVoltarConcluido = findViewById(R.id.btnVoltarConcluido);
 
-        btnVoltarConcluido.setOnClickListener(v -> {
+        boolean encerradaManualmente = getIntent().getBooleanExtra("encerrada_manualmente", false);
 
-            Intent intent = new Intent(
-                    DescansoConcluidoActivity.this,
-                    PrincipalActivity.class
-            );
-
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-
-            startActivity(intent);
-        });
-
-        boolean cicloCompleto = getIntent().getBooleanExtra(
-                "ciclo_completo",
-                false
-        );
-
-        if (cicloCompleto) {
+        if (encerradaManualmente) {
             txtMensagemDescansoConcluido.setText(
-                    "Ciclo Pomodoro concluído! 🎉\n\n" +
-                            "Você completou quatro sessões de foco. " +
-                            "Parabéns pela dedicação!"
+                    "Sessão encerrada! 🌿\n\n" +
+                    "Seu tempo de foco foi registrado no histórico. " +
+                    "Você pode começar uma nova sessão quando quiser."
             );
         } else {
             txtMensagemDescansoConcluido.setText(
-                    "Pausa concluída! 🌿\n\n" +
-                            "Você está pronto para continuar seus estudos?"
+                    "Sessão Pomodoro concluída! 🎉\n\n" +
+                    "Você completou todos os blocos de foco. " +
+                    "Parabéns pela dedicação!"
             );
         }
 
+        btnVoltarConcluido.setOnClickListener(v -> voltarAoInicio());
         btnNovaSessao.setOnClickListener(v -> abrirNovaSessao());
     }
 
+    private void voltarAoInicio() {
+        Intent intent = new Intent(this, PrincipalActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+        finish();
+    }
+
     private void abrirNovaSessao() {
-
-        Intent intent = new Intent(DescansoConcluidoActivity.this, IniciarSessaoActivity.class);
-
+        Intent intent = new Intent(this, IniciarSessaoActivity.class);
         startActivity(intent);
         finish();
     }

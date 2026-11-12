@@ -287,39 +287,40 @@
 
     </LinearLayout>
 
+    <!-- Botão Sair da Conta -->
     <Button
         android:id="@+id/btnExcluirConta"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="52dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="52dp"
-        android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
         android:text="Excluir minha conta"
         android:textAllCaps="false"
         android:textColor="#B3261E"
         android:textSize="14sp"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toTopOf="@id/btnSairConta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/cardSobre" />
 
-    <!-- Botão Sair da Conta -->
     <Button
         android:id="@+id/btnSairConta"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="52dp"
         android:layout_marginEnd="52dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/button_foca_pink"
         android:text="Sair da conta"
         android:textAllCaps="false"
         android:textColor="@color/foca_text"
         android:textSize="15sp"
         app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnExcluirConta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

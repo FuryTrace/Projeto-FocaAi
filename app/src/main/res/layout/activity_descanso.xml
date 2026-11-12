@@ -8,31 +8,44 @@
     android:background="@drawable/bg_foca_gradient"
     tools:context=".activities.DescansoActivity">
 
-    <Button
-        android:id="@+id/btnVoltarDescanso"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:text="Momento de descanso"
+        android:textColor="@color/foca_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEncerrarDescanso"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginTop="12dp"
         android:background="@android:color/transparent"
-        android:text="‹  Voltar"
+        android:text="Encerrar"
         android:textAllCaps="false"
         android:textColor="@color/foca_text"
-        android:textSize="15sp"
+        android:textSize="14sp"
         app:backgroundTint="@null"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtIlustracaoDescanso"
-        android:layout_width="260dp"
-        android:layout_height="247dp"
-        android:layout_marginTop="90dp"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="70dp"
         android:background="@drawable/card_foca"
         android:gravity="center"
         android:text="🌿"
-        android:textSize="100sp"
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="96sp"
+        app:layout_constraintTop_toBottomOf="@id/btnEncerrarDescanso"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -40,74 +53,54 @@
         android:id="@+id/txtCronometroDescanso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:textColor="@color/foca_text"
-        android:textSize="72sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="64sp"
+        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoDescanso"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtIlustracaoDescanso" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linhaCiclosDescanso"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/txtCronometroDescanso"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <TextView
-            android:layout_width="58dp"
-            android:layout_height="58dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/circulo_ciclo_foca"
-            android:gravity="center"
-            android:textColor="@color/foca_text"
-            android:textSize="22sp" />
-
-        <TextView
-            android:layout_width="58dp"
-            android:layout_height="58dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/circulo_ciclo_foca"
-            android:gravity="center"
-            android:textColor="@color/foca_text"
-            android:textSize="22sp" />
-
-        <TextView
-            android:layout_width="58dp"
-            android:layout_height="58dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/circulo_ciclo_foca"
-            android:gravity="center"
-            android:textColor="@color/foca_text"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="58dp"
-            android:layout_height="58dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/circulo_ciclo_foca"
-            android:gravity="center"
-            android:textColor="@color/foca_text"
-            android:textSize="20sp" />
-    </LinearLayout>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/txtMensagemDescanso"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="38dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
         android:gravity="center"
         android:textColor="@color/foca_text"
-        android:textSize="23sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="19sp"
+        app:layout_constraintTop_toBottomOf="@id/linhaCiclosDescanso"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linhaCiclosDescanso" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnIgnorarDescanso"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="54dp"
+        android:background="@drawable/button_foca_pink"
+        android:text="Ignorar descanso"
+        android:textAllCaps="false"
+        android:textColor="@color/foca_text"
+        android:textSize="17sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
