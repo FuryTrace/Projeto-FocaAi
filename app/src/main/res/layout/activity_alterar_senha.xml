@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_foca_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <Button
+            android:id="@+id/btnVoltarAlterarSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:text="‹  Voltar"
+            android:textAllCaps="false"
+            android:textColor="@color/foca_text"
+            android:textSize="15sp"
+            android:backgroundTint="@null" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Alterar senha"
+            android:textColor="@color/foca_text"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Para sua segurança, confirme sua senha atual antes de cadastrar uma nova."
+            android:textColor="@color/foca_text"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edtSenhaAtual"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:hint="Senha atual"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/foca_text"
+            android:textColorHint="#88777777" />
+
+        <EditText
+            android:id="@+id/edtNovaSenha"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:hint="Nova senha (mínimo 8 caracteres)"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/foca_text"
+            android:textColorHint="#88777777" />
+
+        <EditText
+            android:id="@+id/edtConfirmarNovaSenha"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="14dp"
+            android:hint="Confirme a nova senha"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="@color/foca_text"
+            android:textColorHint="#88777777" />
+
+        <Button
+            android:id="@+id/btnSalvarNovaSenha"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/button_foca_pink"
+            android:backgroundTint="@null"
+            android:text="Salvar nova senha"
+            android:textAllCaps="false"
+            android:textColor="@color/foca_text"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

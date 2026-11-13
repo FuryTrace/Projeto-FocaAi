@@ -57,6 +57,10 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
+            android:name=".activities.AlterarSenhaActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".activities.DescansoConcluidoActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

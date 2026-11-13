@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_foca_gradient"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:scrollbars="vertical">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:minHeight="650dp"
+    android:layout_height="wrap_content"
+   
     tools:context=".activities.PrincipalActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,9 +85,9 @@
         android:id="@+id/btnIniciarNovaSessao"
         android:layout_width="0dp"
         android:layout_height="68dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="200dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="24dp"
         android:background="@drawable/button_foca_pink"
         android:text="▶   Iniciar nova sessão"
         android:textAllCaps="false"
@@ -95,8 +102,8 @@
         android:id="@+id/btnHistoricoSessoes"
         android:layout_width="0dp"
         android:layout_height="68dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/button_foca_pink"
         android:text="▤   Histórico das sessões"
@@ -112,8 +119,8 @@
         android:id="@+id/btnAdicionarDisciplinaPrincipal"
         android:layout_width="0dp"
         android:layout_height="68dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/button_foca_pink"
         android:text="＋   Gerenciar disciplinas"
@@ -138,4 +145,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_foca_gradient"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:scrollbars="vertical">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:minHeight="650dp"
+    android:layout_height="wrap_content"
+   
     tools:context=".activities.LoginActivity">
 
     <LinearLayout
@@ -47,6 +54,8 @@
             android:textStyle="bold" />
 
         <EditText
+            android:textColorHint="#666666"
+            android:textColor="#000000"
             android:id="@+id/editEmailLogin"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -67,6 +76,8 @@
             android:textStyle="bold" />
 
         <EditText
+            android:textColorHint="#666666"
+            android:textColor="#000000"
             android:id="@+id/editSenhaLogin"
             android:layout_width="match_parent"
             android:layout_height="48dp"
@@ -105,4 +116,6 @@
 
     </LinearLayout>
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -8,10 +8,12 @@ import com.example.focaai.api.dto.ValidarCodigoRequest;
 import com.example.focaai.api.dto.TokenRecuperacaoResponse;
 import com.example.focaai.api.dto.RedefinirSenhaRequest;
 import com.example.focaai.api.dto.ExcluirContaRequest;
+import com.example.focaai.api.dto.AlterarSenhaRequest;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 
 public interface ApiService {
 
@@ -32,4 +34,7 @@ public interface ApiService {
 
     @POST("api/usuarios/excluir")
     Call<Void> excluirConta(@Body ExcluirContaRequest request);
+
+    @PUT("api/usuarios/alterar-senha")
+    Call<Void> alterarSenha(@Body AlterarSenhaRequest request);
 }

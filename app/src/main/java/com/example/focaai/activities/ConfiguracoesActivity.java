@@ -60,6 +60,7 @@ public class ConfiguracoesActivity extends AppCompatActivity {
         btnSairConta = findViewById(R.id.btnSairConta);
         btnExcluirConta = findViewById(R.id.btnExcluirConta);
         btnConfiguracoesPomodoro = findViewById(R.id.btnConfiguracoesPomodoro);
+        Button btnAlterarSenha = findViewById(R.id.btnAlterarSenhaConfiguracoes);
 
         preferencias = getSharedPreferences("FocaAi", MODE_PRIVATE);
 
@@ -88,6 +89,14 @@ public class ConfiguracoesActivity extends AppCompatActivity {
         imgFotoPerfil.setOnClickListener(v -> selecionarFoto.launch(new String[]{"image/*"}));
 
         btnVoltar.setOnClickListener(v -> finish());
+
+        btnAlterarSenha.setOnClickListener(v -> {
+            Intent intent = new Intent(
+                    ConfiguracoesActivity.this,
+                    AlterarSenhaActivity.class
+            );
+            startActivity(intent);
+        });
 
         btnSairConta.setOnClickListener(v -> confirmarSaida());
 

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_foca_gradient"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:scrollbars="vertical">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:minHeight="650dp"
+    android:layout_height="wrap_content"
+   
     tools:context=".activities.ConfiguracoesActivity">
 
     <!-- Botão Voltar -->
@@ -44,7 +51,7 @@
         android:id="@+id/txtGrupoConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="CONTA"
         android:textColor="@color/foca_text"
@@ -56,9 +63,9 @@
     <LinearLayout
         android:id="@+id/cardConta"
         android:layout_width="0dp"
-        android:layout_height="146dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginEnd="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/card_foca"
         android:orientation="vertical"
         android:padding="12dp"
@@ -111,7 +118,7 @@
         <Button
             android:id="@+id/btnEditarPerfil"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:background="@android:color/transparent"
             android:gravity="center_vertical"
             android:text="Editar Perfil"
@@ -129,7 +136,7 @@
         <Button
             android:id="@+id/btnAlterarSenhaConfiguracoes"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
             android:background="@android:color/transparent"
             android:gravity="center_vertical"
             android:text="Alterar senha"
@@ -145,7 +152,7 @@
         android:id="@+id/txtGrupoPreferencias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="28dp"
         android:text="PREFERÊNCIAS"
         android:textColor="@color/foca_text"
@@ -157,9 +164,9 @@
     <LinearLayout
         android:id="@+id/cardPreferencias"
         android:layout_width="0dp"
-        android:layout_height="176dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginEnd="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/card_foca"
         android:orientation="vertical"
         android:padding="10dp"
@@ -187,7 +194,7 @@
         <Switch
             android:id="@+id/switchNotificacoes"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="48dp"
             android:text="Notificações"
             android:textColor="@color/foca_text"
             android:textSize="14sp" />
@@ -200,7 +207,7 @@
         <Switch
             android:id="@+id/switchModoEscuro"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="48dp"
             android:text="Modo Escuro"
             android:textColor="@color/foca_text"
             android:textSize="14sp" />
@@ -213,7 +220,7 @@
         <TextView
             android:id="@+id/txtIdiomaConfiguracoes"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="48dp"
             android:gravity="center_vertical"
             android:text="Idioma                         Português (BR)  ▾"
             android:textColor="@color/foca_text"
@@ -226,7 +233,7 @@
         android:id="@+id/txtGrupoSobre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="24dp"
         android:text="SOBRE"
         android:textColor="@color/foca_text"
@@ -238,9 +245,9 @@
     <LinearLayout
         android:id="@+id/cardSobre"
         android:layout_width="0dp"
-        android:layout_height="112dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginEnd="52dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/card_foca"
         android:orientation="vertical"
         android:padding="10dp"
@@ -292,9 +299,9 @@
         android:id="@+id/btnExcluirConta"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginEnd="20dp"
         android:background="@android:color/transparent"
         android:text="Excluir minha conta"
         android:textAllCaps="false"
@@ -310,8 +317,8 @@
         android:id="@+id/btnSairConta"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/button_foca_pink"
         android:text="Sair da conta"
         android:textAllCaps="false"
@@ -323,4 +330,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnExcluirConta" />
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
