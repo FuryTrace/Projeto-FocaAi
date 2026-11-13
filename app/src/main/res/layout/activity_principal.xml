@@ -116,7 +116,7 @@
         android:layout_marginEnd="60dp"
         android:layout_marginTop="28dp"
         android:background="@drawable/button_foca_pink"
-        android:text="＋   Adicionar disciplina"
+        android:text="＋   Gerenciar disciplinas"
         android:textAllCaps="false"
         android:textColor="@color/foca_text"
         android:textSize="17sp"

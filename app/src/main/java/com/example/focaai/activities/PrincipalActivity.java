@@ -101,9 +101,9 @@ public class PrincipalActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // Abrir Adicionar Disciplina
+        // Abrir Gerenciar Disciplinas
         btnAdicionarDisciplina.setOnClickListener(v -> {
-            Intent intent = new Intent(PrincipalActivity.this, AdicionarDisciplinaActivity.class);
+            Intent intent = new Intent(PrincipalActivity.this, GerenciarDisciplinasActivity.class);
             startActivity(intent);
         });
     }

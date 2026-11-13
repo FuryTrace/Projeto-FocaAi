@@ -45,7 +45,7 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".activities.AdicionarDisciplinaActivity"
+            android:name=".activities.GerenciarDisciplinasActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
